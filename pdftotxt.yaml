@@ -6,7 +6,7 @@ Resources:
     Type: 'AWS::Serverless::Function'
     Properties:
       Handler: lambda_function.lambda_handler
-      Runtime: python3.7
+      Runtime: python3.9
       CodeUri: .
       Description: ''
       MemorySize: 512
@@ -14,6 +14,6 @@ Resources:
       Role: 'arn:aws:iam::626581302272:role/pgcc-lamdaopensearchrole'
       Environment:
         Variables:
-          TARGET_BUCKET: gl-inter-store
+          TARGET_BUCKET: pgcc-bucket-moses
       Layers:
         - 'arn:aws:lambda:us-east-1:626581302272:function:pdftotext'
